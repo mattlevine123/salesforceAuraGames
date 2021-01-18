@@ -1,0 +1,3 @@
+<aura:event type="COMPONENT" description="Handles answer check ">
+    <aura:attribute name="checkans" type="boolean" />
+</aura:event>

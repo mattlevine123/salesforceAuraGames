@@ -1,6 +1,5 @@
 <aura:component>
-    <aura:attribute name="" />
     <lightning:card>
-
+        <c:FlashCard />
     </lightning:card>
-</aura:component>	
+</aura:component>
