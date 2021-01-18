@@ -6,6 +6,6 @@
     },
     handleEvent : function(cmp, evt, hlp){
         let event = evt.getParam("checkans");
-        cmp.set("v.true", event);
+        cmp.set("v.trueval", event);
     }
 })

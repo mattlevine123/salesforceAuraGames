@@ -1,11 +1,11 @@
 <aura:component controller="FlashCardController">
     <aura:handler name="flash" event="c:FlashCardEvent" action="{!c.handleEvent}" />
     <aura:registerEvent name="flash" type="c:FlashCardEvent" />
-    <aura:attribute name="true" type="boolean" default="true" />
+    <aura:attribute name="trueval" type="boolean" default="true" />
     <aura:attribute name="questions" type="Question__c[]" />
     <aura:attribute name="question" type="Question__c" />
     <lightning:recordViewForm recordId="a004x000003x4MHAAY" objectApiName="Question__C">
-        <aura:if isTrue="{!v.true}">
+        <aura:if isTrue="{!v.trueval}">
             <lightning:outputField fieldName="Question__c" />
             <aura:set attribute="else">
                 <lightning:outputField fieldName="Answer__c" />
