@@ -1,0 +1,13 @@
+<aura:component implements="force:appHostable, flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global">
+    <aura:attribute name="endTime" type="string" />
+
+    <aura:attribute name="timeLeft" type="string" />
+
+    <lightning:tile label="Time Left" class="slds-page-header">
+        {!v.timeLeft}
+    </lightning:tile>
+
+    <lightning:input type="datetime" name="input1" label="Enter a date/time value" value="{!v.endTime}" />
+
+    <lightning:button variant="brand" label="Start Timer" title="Start Timer" onclick="{!c.startTimer}" />
+</aura:component>	
