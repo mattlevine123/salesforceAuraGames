@@ -1,0 +1,15 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global">
+    <!-- only displays hours minutes and seconds need to set default time and date to count down to -->
+    <!--aura:handler name="init" value="{!this}" action="{!c.startTimer}" /-->
+    <aura:attribute name="endTime" type="string" default="2021-24-01 09:00:00"/>
+
+    <aura:attribute name="timeLeft" type="string" />
+
+    <lightning:tile label="Time Left" class="slds-page-header">
+        {!v.timeLeft}
+    </lightning:tile>
+
+    <lightning:input type="datetime" name="input1" label="Enter a date/time value" value="{!v.endTime}" />
+
+    <lightning:button variant="brand" label="Start Timer" title="Start Timer" onclick="{!c.startTimer}" />
+</aura:component>

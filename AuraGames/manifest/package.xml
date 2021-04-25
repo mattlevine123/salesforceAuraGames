@@ -32,5 +32,17 @@
         <members>*</members>
         <name>StaticResource</name>
     </types>
+    <types>
+        <members>Question__c</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>Question__c</members>
+        <name>CustomTab</members>
+    </types>
+    <types>
+        <members>Categories</members>
+        <name>GlobalValueSet</name>
+    </types>
     <version>50.0</version>
 </Package>

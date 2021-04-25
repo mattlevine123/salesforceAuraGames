@@ -1,0 +1,5 @@
+<aura:component>
+    <lightning:card>
+        <c:FlashCard />
+    </lightning:card>
+</aura:component>
