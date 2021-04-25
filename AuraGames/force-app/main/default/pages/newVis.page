@@ -1,0 +1,23 @@
+<!--apex:page standardController="Question__C" recordSetVar="accs"-->
+<apex:page controller="QuestionController">
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockSection >
+                <apex:pageBlockTable value="{!qList}" var="acc" id="optable">
+                    <apex:column value="{!acc.Name}" />
+                    <apex:column value="{!acc.Answer__c}" />
+                </apex:pageBlockTable>
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockSection >
+                <apex:inputField value="{!q.Name}" /><br/>
+                <apex:inputField value="{!q.Answer__c}" /> 
+                <apex:inputField value="{!q.Category__c}"/>
+                
+            </apex:pageBlockSection>
+            <apex:pageBlockButtons location="bottom">
+                    <apex:commandButton action="{!qsave}" value="Save" reRender="optable" />
+                </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
